@@ -1,0 +1,53 @@
+/* pages/mall/information/information.wxss */
+page{
+  background: #f5f5f5
+}
+.topImg image{
+  width: 100%;
+  height:340rpx
+}
+.infoList{
+  width:100%
+}
+.infoList .allInfo{
+  margin-bottom:10rpx;
+  background-color:#fff
+}
+.info{
+display:flex;
+flex-direction: row;
+padding:20rpx 30rpx;
+height:180rpx;
+}
+.infoletf{
+width:50%;
+position: relative
+}
+.inforight{
+width:50%;
+text-align: right
+}
+.inforight image{
+  width:180rpx;
+  height:180rpx
+}
+.title{
+font-size:30rpx;
+color: #333;
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp:3;
+-webkit-box-orient: vertical;
+}
+.yuedu{
+  font-size:24rpx;
+  color: #999999;
+  position:absolute;
+  left: 0;
+  bottom: 0
+}
+.yuImg{
+  width: 26rpx;
+  height:16rpx
+}

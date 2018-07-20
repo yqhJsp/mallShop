@@ -1,0 +1,138 @@
+/**app.wxss**/
+ @import '/common/common.wxss';
+ @import 'icon.wxss'; 
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box
+} 
+/*复选框样式*/
+.checkbox_item{
+    display: inline-block;
+    margin-right: 5rpx;
+    border: 1px solid #aaa;
+    width: 40rpx;
+    height:40rpx;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.checkbox_item.active {
+    background: #f02804;
+    position: relative;
+    border-color: #f02804;
+}
+.checkbox_item.active:after {
+    position: absolute;
+    content: '';
+    width: 20rpx;
+    height: 15rpx;
+    border: 2px solid #ffffff;
+    border-top: none;
+    border-right: none;
+    left: 0.20rem;
+    top: 0.20rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.checkbox_item checkbox {
+    visibility: hidden;
+}
+/*弹窗样式*/
+.commodity_screen{
+  background-color:rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 666;
+  bottom:0;  
+}
+.modalPop{
+position:relative;
+background:#fff;
+width:90%;
+margin:0 auto;
+margin-top:150rpx;
+border-radius: 16rpx
+}
+.modelTitle{
+  width: 100%;
+  text-align:center;
+  font-size:30rpx;
+  color:#333;
+  padding:20rpx 0;
+  border-bottom:1px solid #ccc      
+}
+.popBottom{
+  width: 100%;
+  margin-top:20rpx;
+  padding:20rpx 0;
+  text-align: center;
+}
+.cancelBtn,.confirmBtn{
+ padding:20rpx 0;
+ width:30%;
+ display: inline-block;
+ font-size:28rpx;
+ text-align: center;
+ border-radius:8rpx
+}
+.cancelBtn{
+ color:#333;
+ background: #f0f0f0;
+}
+.confirmBtn{
+  margin-left:20rpx;
+ color:#fff;
+ background:#f44336;
+}
+/*按钮样式*/
+.mod_btn {
+    background: #45cdc6;
+    color: #fff;
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    border: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 92rpx;
+    margin-top: 50rpx;
+    line-height: 92rpx;
+    text-align: center;
+    font-size: 32rpx;
+    border-radius: 8rpx;
+    position: relative;
+}
+/*预加载*/
+.loadView{
+  background-color:rgba(255,255,255,1);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 6666;
+  bottom:0;
+  text-align: center;
+}
+.loadImg{
+  width: 200rpx;
+  margin-top:200rpx
+}

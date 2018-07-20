@@ -1,0 +1,22 @@
+<!--pages/mall/information/information.wxml-->
+<!-- <view class='topImg'>
+<image src='/images/indexImg/userbg.png'></image>
+</view> -->
+<view class='infoList'>
+ <block wx:for="{{informationlist}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+ <view class='allInfo' data-id="{{item.id}}" bindtap='goInfoDetail'>
+  <view class='info'>
+  <view class='infoletf'>
+   <view class='title'>{{item.title}}</view>
+   <view class='yuedu'>
+   <image src='/images/indexImg/icon_liulang.png' class='yuImg'></image>
+   <label>{{item.pvView}}人浏览</label>
+   </view>
+  </view>
+    <view class='inforight'>
+    <image src="{{fileDomain}}{{item.image}}"></image>
+    </view>
+  </view>
+ </view>
+ </block>
+</view>

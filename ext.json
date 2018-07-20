@@ -1,0 +1,203 @@
+{
+  "extEnable": true,
+  "extAppid": "wx9c7011e815897e32",
+  "directCommit": false,
+  "ext": {
+    "name": "营销商城",
+    "appid": "wx9c7011e815897e32",
+    "createUserId": 1000008
+  },
+  
+"extPages": {
+  "pages/mall/index/index": {
+    "navigationBarTitleText": ""
+  },
+  "pages/mall/classify/page": {
+    "navigationBarTitleText": "分类"
+  },
+  "pages/mall/scart/page": {
+    "navigationBarTitleText": "购物车"
+  },
+  "pages/user/index/mine": {
+    "navigationBarTitleText": "个人中心"
+  },
+  "pages/mall/message/message": {
+    "navigationBarTitleText": "消息"
+  },
+  "pages/mall/detail/mall_detail": {
+    "navigationBarTitleText": "商品详情"
+  },
+  "pages/user/mineOrder/orderItems": {
+    "navigationBarTitleText": "我的订单"
+  },
+  "pages/mall/list/shopList": {
+    "navigationBarTitleText": "商品列表"
+  },
+  "pages/mall/payment/orderPay": {
+    "navigationBarTitleText": "订单支付"
+  },
+  "pages/mall/address/address": {
+    "navigationBarTitleText": "收货地址"
+  },
+  "pages/mall/paySuccess/success": {
+    "navigationBarTitleText": "支付成功"
+  },
+  "pages/mall/orderDetail/orderDetail": {
+    "navigationBarTitleText": "订单详情"
+  },
+  "pages/mall/waitPay/fail": {
+    "navigationBarTitleText": "支付失败"
+  },
+  "pages/mall/refund/orderRefund": {
+    "navigationBarTitleText": "退款"
+  },
+  "pages/mall/refundDetail/refundDetail": {
+    "navigationBarTitleText": "退款详情"
+  },
+  "pages/mall/evaluate/evaluate": {
+    "navigationBarTitleText": "评价"
+  },
+  "pages/mall/cancelDetail/cancelPage": {
+    "navigationBarTitleText": "取消订单"
+  },
+  "pages/mall/notice/noticeList": {
+    "navigationBarTitleText": "店铺公告"
+  },
+  "pages/mall/consulting/consulting": {
+    "navigationBarTitleText": "立即预约"
+  },
+  "pages/mall/information/information": {
+    "navigationBarTitleText": "资讯"
+  },
+  "pages/mall/infodetail/infodetail": {
+    "navigationBarTitleText": "资讯详情"
+  },
+  "pages/marketing/integral/integral": {
+    "navigationBarTitleText": "积分"
+  },
+  "pages/marketing/coupon/coupon": {
+    "navigationBarTitleText": "优惠券"
+  },
+  "pages/marketing/myCoupon/myCoupon": {
+    "navigationBarTitleText": "我的优惠券"
+  },
+  "pages/marketing/seckill/seckill": {
+    "navigationBarTitleText": "秒杀"
+  },
+  "pages/marketing/group/group": {
+    "navigationBarTitleText": "团购"
+  },
+  "pages/marketing/myCampaign/myCampaign": {
+    "navigationBarTitleText": "我的分销"
+  },
+  "pages/marketing/distribution/distribution": {
+    "navigationBarTitleText": "提交审核"
+  },
+  "pages/marketing/deposit/deposit": {
+    "navigationBarTitleText": "提现金额"
+  },
+  "pages/user/storeUser/storeUser": {
+    "navigationBarTitleText": "个人中心"
+  },
+  "pages/mall/expressage/expressage": {
+    "navigationBarTitleText": "物流信息"
+  },
+  "pages/mall/personalinfo/personalinfo": {
+    "navigationBarTitleText": "个人信息"
+  },
+  "pages/mall/member/member": {
+    "navigationBarTitleText": "我的会员"
+  },
+  "pages/mall/memberDetail/memberDetail": {
+    "navigationBarTitleText": "会员卡详情"
+  },
+    "pages/mall/qrcode/qrcode":{
+      "navigationBarTitleText": "生成推广码"
+  },
+  "pages/mall/myFans/myFans":{
+    "navigationBarTitleText": "我的粉丝"
+  }
+},
+"pages": [
+  "pages/mall/index/index",
+  "pages/mall/classify/page",
+  "pages/mall/scart/page",
+  "pages/user/index/mine",
+  "pages/mall/message/message",
+  "pages/mall/detail/mall_detail",
+  "pages/user/mineOrder/orderItems",
+  "pages/mall/list/shopList",
+  "pages/mall/payment/orderPay",
+  "pages/mall/address/address",
+  "pages/mall/paySuccess/success",
+  "pages/mall/orderDetail/orderDetail",
+  "pages/mall/waitPay/fail",
+  "pages/mall/refund/orderRefund",
+  "pages/mall/refundDetail/refundDetail",
+  "pages/mall/evaluate/evaluate",
+  "pages/mall/cancelDetail/cancelPage",
+  "pages/mall/notice/noticeList",
+  "pages/mall/consulting/consulting",
+  "pages/mall/information/information",
+  "pages/mall/infodetail/infodetail",
+  "pages/marketing/integral/integral",
+  "pages/marketing/coupon/coupon",
+  "pages/marketing/myCoupon/myCoupon",
+  "pages/marketing/seckill/seckill",
+  "pages/marketing/group/group",
+  "pages/marketing/myCampaign/myCampaign",
+  "pages/marketing/distribution/distribution",
+  "pages/marketing/deposit/deposit",
+  "pages/user/storeUser/storeUser",
+  "pages/mall/expressage/expressage",
+  "pages/mall/member/member",
+  "pages/mall/memberDetail/memberDetail",
+  "pages/mall/personalinfo/personalinfo",
+  "pages/mall/qrcode/qrcode",
+  "pages/mall/myFans/myFans"
+],
+"window": {
+  "backgroundTextStyle": "black",
+  "navigationBarBackgroundColor": "white",
+  "navigationBarTitleText": "微商城",
+  "navigationBarTextStyle": "black"
+},
+"tabBar": {
+  "color": "#292929",
+  "selectedColor": "#000",
+  "backgroundColor": "#fff",
+  "borderStyle": "black",
+  "list": [
+    {
+      "pagePath": "pages/mall/index/index",
+      "text": "首页",
+      "iconPath": "images/tabbar/home.png",
+      "selectedIconPath": "images/tabbar/home-in.png"
+    },
+    {
+      "pagePath": "pages/mall/classify/page",
+      "text": "分类",
+      "iconPath": "images/tabbar/product.png",
+      "selectedIconPath": "images/tabbar/product-in.png"
+    },
+    {
+      "pagePath": "pages/mall/scart/page",
+      "text": "购物车",
+      "iconPath": "images/tabbar/car.png",
+      "selectedIconPath": "images/tabbar/car-in.png"
+    },
+    {
+      "pagePath": "pages/user/storeUser/storeUser",
+      "text": "我的",
+      "iconPath": "images/tabbar/user.png",
+      "selectedIconPath": "images/tabbar/user-in.png"
+    }
+  ]
+},
+"networkTimeout": {
+  "request": 5000,
+  "connectSocket": 5000,
+  "uploadFile": 5000,
+  "downloadFile": 5000
+}
+}

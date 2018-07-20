@@ -1,0 +1,17 @@
+<!--pages/mall/infodetail/infodetail.wxml-->
+<include src="../../../common/common.wxml"></include>
+<view class='title'>
+<label>{{info.title}}</label>
+</view>
+<view class='infodetail'>
+ <view class='left'>
+ <label>{{info.createTime}}</label>
+ </view>
+  <view class='right'>
+    <image src='/images/indexImg/icon_liulang.png' class='yuImg'></image>
+   <label>{{info.pvView}} 人浏览</label>
+  </view>
+</view>
+<view class='detail'>
+ <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>

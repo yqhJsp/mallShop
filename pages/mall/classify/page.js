@@ -1,0 +1,175 @@
+// pages/mall/classify/page.js
+const app = getApp();
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    leftData: [],
+    rightData: [],
+    fristId: '',
+    fileDomain: app.static_data.file_domain_url,
+    likeTitle: '',
+    sort: 0,
+    searchName: '',
+    focus: false,
+    isLoad:true
+  },
+  getSort: function (e) {
+    console.log(e);
+    var id = e.currentTarget.dataset.set;
+    var that = this;
+    that.setData({
+      sort: id
+    })
+    that.loadProducts(that.data.fristId, that.data.likeTitle, that.data.sort);
+  },
+  loadProducts: function (classid, likeTitle, type_) {
+    var that = this;
+    app.api_util.getProductList({ groupId: classid, size: 10, 'number': 1, likeTitle: likeTitle, 'type': type_ }, "", function sussess(res) {
+      console.log(res);
+      if (res.errcode == 0) {
+        app.globalData.groupId = ""
+        var products = res.result.content;
+        for (var j = 0; j < products.length; j++) {
+          var p = products[j];
+          var s = p.imageIds.split(",");
+          p.imageIds = s[0];
+        }
+        that.setData({
+          rightData: products
+
+        })
+      }
+    }, function fail(res) {
+
+    });
+
+  },
+  openMessage: function () {
+    wx.navigateTo({
+      url: '../message/message'
+    })
+  },
+  /**
+   * 切换分类
+   */
+  cutClass: function (options) {
+    var id = options.currentTarget.dataset.id;
+    var that = this;
+    that.setData({
+      fristId: id
+    })
+    that.loadProducts(that.data.fristId, that.data.likeTitle, that.data.sort);
+  },
+  /*搜索*/
+  goSearch: function () {
+    var title = this.data.searchName;
+    if (title != '') {
+      wx.navigateTo({
+        url: '../list/shopList?likeTitle=' + title + '&stuats=2',
+      })
+    } else {
+      app.toast.warn("请输入搜索的商品名", 1000);
+    }
+  },
+  bindSearch: function (e) {
+    var value = e.detail.value;
+    if (value > 0 || value.length > 0) {
+      this.setData({
+        searchName: value,
+      })
+    } else {
+      that.setData({
+        searchName: ''
+      })
+    }
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    var that = this; 
+    that.getGroup();
+    app.common_util.setBarColor(app.globalData.shopInfo.tone);
+  },
+  //获取分组
+  getGroup:function(){
+    var that=this;
+ var groupId = app.globalData.groupId;
+    app.api_util.getGroupIdList("", function sussess(res) {
+      if (res.errcode == 0) {
+        if (res.result.length > 0) {
+          if (groupId==''){
+            groupId=res.result[0].id
+          }
+          console.log(groupId + "sss")
+          that.setData({
+            fristId: groupId,
+            leftData: res.result,
+            isLoad:false
+          })
+          that.loadProducts(groupId, that.data.likeTitle, that.data.sort);
+        }
+        app.globalData.groupId = ""
+      }
+    }, function fail(res) {
+
+    });
+  },
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+   this.getGroup();
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  goDetail: function (options) {
+    var id = options.currentTarget.id;
+    wx.navigateTo({
+      url: '../detail/mall_detail?id=' + id
+    })
+  },
+})
